@@ -1,0 +1,21 @@
+Retirando os padrões
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: ""
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
