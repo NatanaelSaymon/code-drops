@@ -19,3 +19,11 @@ a{
 	cursor: pointer;
 	color: inherit;
 }
+
+/* VARIAVEIS */
+
+:root{
+	--color-principal: #ff5E84 (para chamar: var(--color-principal);
+}
+
+
