@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#items-wrapper{
+  width: 100vw;
+}
+
+#items{
+  display: flex;
+  overflow-x: auto; /*apresenta o scroll caso haja necessidade*/
+  scroll-snap-type: x mandatory; /*para saber o que é essa propriedade: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type*/
+  -webkit-overflow-scrolling: touch; /*Para que a função scroll-snap-type funcione em todos os dispositivos;*/
+  scroll-behavior: smooth;
+}
+
+.item{
+  flex: none;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: start;
+  pointer-events: none; /*Retira o evento do cursor*/
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*Irá se adaptar da forma que quisermos, com o valor cover, ela vai cobrir todo o espaço disponivel que tiver*/
+} 

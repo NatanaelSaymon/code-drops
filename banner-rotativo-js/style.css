@@ -1,0 +1,33 @@
+.slider-rotativo{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider{
+  width: 80%; /*ao inserir uma largura no "filho", ele vai ter todas as proriedades acima, e vai deixar alinhado ao centro.*/
+  max-width: 500px;
+  height: 25vh;
+  max-height: 150px;
+
+  position: relative; /*faz com que as imagens fiquem dentro da div pai*/
+}
+
+#slider img{
+  opacity: 0; /*Deixa as imagens invisiveis*/
+  width: 100%; /*ocupando toda a largura disponivel dentro da div pai*/
+  height: 100%; /*ocupando toda a altura disponivel dentro da div pai*/
+
+  position: absolute; /*As imagens vão ficar uma em cima da outra*/
+  object-fit: cover; /*Para que o tamanho da imagem ocupe totalmente o espaço disponivel*/
+  transition: opacity 800ms;
+}
+
+#slider img.selected{ /*Faz com que fique visivel a imagem que contm a classe "selected"*/
+  opacity: 1; 
+}
