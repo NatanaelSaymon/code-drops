@@ -1,74 +1,74 @@
-## GIT BASH
+## ALGUNS COMANDO DO GIT BASH
 
-Para cadastrar nome: git config --global user.name
+Para cadastrar nome: **git config --global user.name**
 
-Para cadastrar email: git config --global user.email
+Para cadastrar email: **git config --global user.email**
 
-=====================================================================================================================
+---
 
-*NAVEGAR ENTRE PASTAS
+## NAVEGAR ENTRE PASTAS
 
-Para entrar na pasta raiz: cd C:/NOMEDAPASTA
+Para entrar na pasta raiz: **cd C:/NOMEDAPASTA**
 
-Para entrar em pastas: cd NOMEDAPASTA
+Para entrar em pastas: **cd NOMEDAPASTA**
 
-Para voltar um diretorio: cd ../ 
+Para voltar um diretorio: **cd ../**
 
-Para saber o que tem nas pastas: ls
+Para saber o que tem nas pastas: **ls**
 
-=====================================================================================================================
+---
 
-*Comandos
+## Comandos
 
-git status
-git pull
-git add -A ou git commit -am "frase" <<- Para adicionar e já fazer o commit
-git commit -m "frase de identificação" ou git commit -am "frase" <<- Para adicionar e já fazer o commit
-git push origin master
+**git status**
+**git pull**
+**git add -A ou git commit -am "frase"** <<- Para adicionar e já fazer o commit
+**git commit -m "frase de identificação"** ou **git commit -am "frase"** <<- Para adicionar e já fazer o commit
+**git push origin master**
 
-=====================================================================================================================
+---
 
-*COMANDO DE LIMPAR A TELA
+## COMANDO DE LIMPAR A TELA
 
-clear
+**clear**
 
-=====================================================================================================================
+---
 
-*COMANDO PARA VER O HITSORICO
+## COMANDO PARA VER O HITSORICO
 
 git log e numero de identificação do commit
 
-=====================================================================================================================
+---
 
-*REVERTENDO MODIFICAÇÕES
+## REVERTENDO MODIFICAÇÕES
 
-git reset --soft numerodocommit (volta para um estado antes do commit e já preparado para commitar)
-git reset --mixed numerodocommit (volta para um estado antes do commit e porem não esta preparado para commitar, tem q da o git add)
-git reset --hard numerodocommit (volta para o ultimo commit)
+**git reset --soft numerodocommit** *(volta para um estado antes do commit e já preparado para commitar)*
+**git reset --mixed numerodocommit** *(volta para um estado antes do commit e porem não esta preparado para commitar, tem q da o git add)*
+**git reset --hard numerodocommit** *(volta para o ultimo commit)*
 
-=====================================================================================================================
+---
 
-*COMANDO DE CRIAR PASTA
+## COMANDO DE CRIAR PASTA
 
-cd Desktop/
+**cd Desktop/**
 
-mkdir nomedapasta
+**mkdir nomedapasta**
 
-Para entrar na pasta: cd nomedapasta/
+Para entrar na pasta: **cd nomedapasta/**
 
-=====================================================================================================================
+---
 
-*COMANDO PARA TROCAR DE BRANCH
+## COMANDO PARA TROCAR DE BRANCH
 
-git checkout NOMEDABRANC
+**git checkout NOMEDABRANC**
 
-Para saber todos os commits na branch: git log
+Para saber todos os commits na branch: **git log**
 
-Para saber todos os branch: git branch
+Para saber todos os branch: **git branch**
 
-=====================================================================================================================
+---
 
-*COMANDO PARA CLONAR UM PROJETO
+## COMANDO PARA CLONAR UM PROJETO
 
 1º Temos que criar uma "pasta" dentro do nosso servidor. Ex: ModuloJs
 
@@ -78,9 +78,9 @@ Para saber todos os branch: git branch
 
 4º Espere a conclusão da clonagem e dê o comando git log para saber os commits que foram realizados.
 
-=====================================================================================================================
+---
 
-*CRIANDO UM BRANCH E FAZENDO UM MERGE
+## CRIANDO UM BRANCH E FAZENDO UM MERGE
 
 1º Entre em seu diretorio local pelo git bash
 
@@ -96,6 +96,6 @@ Para saber todos os branch: git branch
 
 4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
 
-Unindo as branchs, comando: git merge <<nome da branch de desenvolvimento>>
+Unindo as branchs, comando: git merge *nome da branch de desenvolvimento*
 
 Para enviar as moficações para o repositorio remoto, basta "adicionar as modificações, commitar" e usar o comando: git push -u origin master
