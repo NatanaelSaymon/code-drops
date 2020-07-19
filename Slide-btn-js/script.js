@@ -4,7 +4,7 @@ let imgs = []
 let slide
 let imgAtual
 let maxImage
-let tempoTroca = 3000
+let tempoTroca
 
 function preCarregamento(){
   let img = 1
@@ -36,6 +36,7 @@ function inicia(){
   maxImage = imgs.length - 1
   slider = document.querySelector("#banner")
   carregaImg(imgAtual)
+  tempoTroca = 3000
   setInterval(troca, tempoTroca)
 }
 
