@@ -1,3 +1,6 @@
+## TEMPLATE BOOTSTRAP
+
+````html
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -23,10 +26,13 @@
             </p>
         
         </div>
-        <!-- Primeiro o jQuery, depois o Popper.js, e depois o Bootstrap JS -->
+
+        <!-- Siga a ordem: 1º o jQuery, 2º o Popper.js, e 3º o Bootstrap 4º o JS -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="js/scritps.js"></script>
+        
     </body>
 </html>
+````
