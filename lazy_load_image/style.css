@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 200vh;
+}
+.container{
+  width: 100%;
+  padding: 100px 0;
+}
+
+.slider{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  row-gap: 40px;
+}
+
+
+/*Quando a imagem tiver o atributo "[data-src]"*/
+img[data-src]{
+  opacity: 0;
+  transform: scale(0); /* transform: translateX(-100%); */
+}
+
+/*Quando a imagem tiver o atributo "[src]"*/
+img[src]{
+  opacity: 1;
+  transform: scale(1); /* transform: translateX(0); */
+  transition: 2s ease-in-out;
+}
+
+/*
+transform: translateX(-100%): a imagem some
+transform: translateX(0): a imagem vem da esquerda para direta, ate chegar na sua posição de origem.
+*/
