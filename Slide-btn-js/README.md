@@ -84,7 +84,7 @@ function carregaImg(img){
   }
 ````
 
-Dentro dessa função, precisamos passar o
+# Dentro dessa função, precisamos passar o
 
 - **preCarregamento()** : pois esta função, vai pre-carregar nessa imagens
 - **imgAtual** : inicia com 0
@@ -108,7 +108,7 @@ Vamos criar mias uma variavel:
 let vtempo
 ````
 
-As unicas funções que sofreram alterações será: **function inciar() e function troca()**
+# As unicas funções que sofreram alterações será: **function inciar() e function troca()**
 
 Ex:
 
@@ -123,10 +123,10 @@ function inicia(){
 }
 ````
 
-A variavel **tempoTroca não mais referente ao setInterval()**. Essa variavel tempoTroca servirá como um contador para o tempo.
+# A variavel **tempoTroca não mais referente ao setInterval()**. Essa variavel tempoTroca servirá como um contador para o tempo.
 
 
-Agora iremos criar uma nova função, chamada: **anima()**. Esse função vai controlar todo o tempo do nosso processo.
+# Agora iremos criar uma nova função, chamada: **anima()**. Esse função vai controlar todo o tempo do nosso processo.
 
 ````js
 function anima(){
@@ -134,7 +134,7 @@ function anima(){
 }
 ````
 
-Agora vamos melhorar a nossa função troca, pois será utilizada pelos os **botões**. Pois essa função ela tem que saber que, quando clicar-mos a direita, avança um slide. E quando clicar na esquerda, recuar um slide.
+# Agora vamos melhorar a nossa função troca, pois será utilizada pelos os **botões**. Pois essa função ela tem que saber que, quando clicar-mos a direita, avança um slide. E quando clicar na esquerda, recuar um slide.
 
 **Iremos para como paremetro a (direcao). Ex: quando passarmos -1 a troca terá que ser feito para esquerda e quando passarmos 1 a troca terá que ser feita para direita.**
 
@@ -152,8 +152,24 @@ function troca(direcao){
 }
 ````
 
-Agora precisamos chamar o evento de troca nos botões: 
+# Agora precisamos chamar o evento de troca nos botões: 
 ````html
 <button class="btn-arrow" onclick="troca(-1)"> < </button>
 <button class="btn-arrow" onclick="troca(1)"> > </button>
 ````
+
+# Agora precisamos inserir novamente a troca automatica, iremos trabalhar na função anima()
+
+A anima() ela vai incrementar o tempoTroca. Lembre-se a variavel, tempoTroca está zerada.
+
+````js
+function anima(){
+  tempoTroca++
+  if(tempoTroca >= 500){
+    tempoTroca = 0
+    troca(1) //Sempre será feita a troca para o proximo slide
+  } 
+  window.requestAnimationFrame(anima) //gerenciamento de animação
+}
+````
+

@@ -36,7 +36,12 @@ function troca(direcao){
 }
 
 function anima(){
-
+  tempoTroca++
+  if(tempoTroca >= 500){
+    tempoTroca = 0
+    troca(1)
+  }
+  window.requestAnimationFrame(anima)
 }
 
 function inicia(){
@@ -46,6 +51,7 @@ function inicia(){
   slider = document.querySelector("#banner")
   carregaImg(imgAtual)
   tempoTroca = 0
+  anima()
 }
 
 window.addEventListener("load", inicia)
