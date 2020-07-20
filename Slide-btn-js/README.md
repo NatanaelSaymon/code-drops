@@ -1,11 +1,11 @@
-## Dicas / Explicações
+## Dicas / Explicações: Slide com botões
 
 # Variaveis que serão usadas no sistema
-- let imgs = [] <- armazena todas as imagens
-- let slide <- variavel que vai receber o id da div/section
-- let imgAtual <- contem a imagem atual
-- let maxImage <- contem o tamanho maximo de todas as imagens
-- let tempoTroca = 3000 <- setInterval
+- **let imgs** = [] <- armazena todas as imagens
+- **let slide** <- variavel que vai receber o id da div/section
+- **let imgAtual** <- contem a imagem atual
+- **let maxImage** <- contem o tamanho maximo de todas as imagens
+- **let tempoTroca** = 3000 <- setInterval
 
 
 
@@ -86,16 +86,74 @@ function carregaImg(img){
 
 Dentro dessa função, precisamos passar o
 
-- preCarregamento() : pois esta função, vai pre-carregar nessa imagens
-- imgAtual : inicia com 0
-- maxImage : guarda o numero maximo de imagens
-- slider : exibi a imagem na div/section
-- carregaImg(imgAtual) : carrega a imagem atual
-- setInterval(troca, tempoTroca) : tempo de troca
+- **preCarregamento()** : pois esta função, vai pre-carregar nessa imagens
+- **imgAtual** : inicia com 0
+- **maxImage** : guarda o numero maximo de imagens
+- **slider** : exibi a imagem na div/section
+- **carregaImg(imgAtual)** : carrega a imagem atual
+- **setInterval(troca, tempoTroca)** : tempo de troca
 
 
 # Agora que todo o nosso codigo está pronto, vamos chamar a função inicia() quando a pagina estiver carregada
 
 ````js
   window.addEventListener("load", inicia)
+````
+
+## Agora vamos criar a logica dos botões
+
+Vamos criar mias uma variavel:
+
+````js
+let vtempo
+````
+
+As unicas funções que sofreram alterações será: **function inciar() e function troca()**
+
+Ex:
+
+````js
+function inicia(){
+  preCarregamento()
+  imgAtual = 0
+  maxImage = imgs.length - 1
+  slider = document.querySelector("#banner")
+  carregaImg(imgAtual)
+  tempoTroca = 0
+}
+````
+
+A variavel **tempoTroca não mais referente ao setInterval()**. Essa variavel tempoTroca servirá como um contador para o tempo.
+
+
+Agora iremos criar uma nova função, chamada: **anima()**. Esse função vai controlar todo o tempo do nosso processo.
+
+````js
+function anima(){
+
+}
+````
+
+Agora vamos melhorar a nossa função troca, pois será utilizada pelos os **botões**. Pois essa função ela tem que saber que, quando clicar-mos a direita, avança um slide. E quando clicar na esquerda, recuar um slide.
+
+**Iremos para como paremetro a (direcao). Ex: quando passarmos -1 a troca terá que ser feito para esquerda e quando passarmos 1 a troca terá que ser feita para direita.**
+
+````js
+function troca(direcao){
+  tempoTroca = 0 // Toda vez que for feita um troca de slide, o tempo será zerado.
+  imgAtual+= direcao
+  if(imgAtual > maxImage){ //Aqui sabemos que o img está recebendo o tamanho do array de img
+    imgAtual = 0
+  }
+  else if(imgAtual < 0){ //Aqui, quando chegar ao fim, a imgAtual vai receber o tamanho novamente o array de img
+    imgAtual = maxImage
+  }
+  carregaImg(imgAtual)
+}
+````
+
+Agora precisamos chamar o evento de troca nos botões: 
+````html
+<button class="btn-arrow" onclick="troca(-1)"> < </button>
+<button class="btn-arrow" onclick="troca(1)"> > </button>
 ````

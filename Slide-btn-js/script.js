@@ -5,6 +5,7 @@ let slide
 let imgAtual
 let maxImage
 let tempoTroca
+let vtempo
 
 function preCarregamento(){
   let img = 1
@@ -22,12 +23,20 @@ function carregaImg(img){
   slider.style.backgroundSize = "cover"
 }
 
-function troca(){
-  imgAtual++
+function troca(direcao){
+  tempoTroca = 0
+  imgAtual+= direcao
   if(imgAtual > maxImage){
     imgAtual = 0
   }
+  else if(imgAtual < 0){
+    imgAtual = maxImage
+  }
   carregaImg(imgAtual)
+}
+
+function anima(){
+
 }
 
 function inicia(){
@@ -36,8 +45,7 @@ function inicia(){
   maxImage = imgs.length - 1
   slider = document.querySelector("#banner")
   carregaImg(imgAtual)
-  tempoTroca = 3000
-  setInterval(troca, tempoTroca)
+  tempoTroca = 0
 }
 
 window.addEventListener("load", inicia)
