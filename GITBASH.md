@@ -70,23 +70,23 @@ Para saber todos os branch: **git branch**
 
 ## COMANDO PARA CLONAR UM PROJETO
 
-1º Temos que criar uma "pasta" dentro do nosso servidor. Ex: ModuloJs
+# 1º Temos que criar uma "pasta" dentro do nosso servidor. Ex: ModuloJs
 
-2º Vá ao github e copie a URL da pagina do projeto.
+# 2º Vá ao github e copie a URL da pagina do projeto.
 
-3º Entre na pasta atravez do git bash e dentro da pasta execute o comando: git clone urldoprojeto 
+# 3º Entre na pasta atravez do git bash e dentro da pasta execute o comando: git clone urldoprojeto 
 
-4º Espere a conclusão da clonagem e dê o comando git log para saber os commits que foram realizados.
+# 4º Espere a conclusão da clonagem e dê o comando git log para saber os commits que foram realizados.
 
 ---
 
 ## CRIANDO UM BRANCH E FAZENDO UM MERGE
 
-1º Entre em seu diretorio local pelo git bash
+# 1º Entre em seu diretorio local pelo git bash
 
-2º Dentro do seu diretorio, execute o comando: "git checkout -b *nome da branch* aperte "enter"
+# 2º Dentro do seu diretorio, execute o comando: "git checkout -b *nome da branch* aperte "enter"
 
-3º Pronto foi criada a nova branch, apartir de agora todas as modificações e todos os commits ficaram dentro dessa nova branch.
+# 3º Pronto foi criada a nova branch, apartir de agora todas as modificações e todos os commits ficaram dentro dessa nova branch.
 
 - nessa branch vc pode usar todos os comandos normais, ex:
 - git status
@@ -94,7 +94,7 @@ Para saber todos os branch: **git branch**
 - git commit -m "frase do commit"
 - ATENÇÃO: na hora de enviar as modificações para o repositorio remoto, vc tem que inserir o nome da branch nova. Ex: se vc tem 2 branchs, branch-prod, e branch-dev. Se as modificações forem feitas na "branch-dev" o comando para enviar as modificações é: git push -u origin branch-dev. Ou seja, basta mudar a origem, entendeu? 
 
-4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
+# 4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
 
 Unindo as branchs, comando: git merge *nome da branch de desenvolvimento*
 
