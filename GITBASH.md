@@ -94,8 +94,8 @@ Para saber todos os branch: **git branch**
 - git commit -m "frase do commit"
 - ATENÇÃO: na hora de enviar as modificações para o repositorio remoto, vc tem que inserir o nome da branch nova. Ex: se vc tem 2 branchs, branch-prod, e branch-dev. Se as modificações forem feitas na "branch-dev" o comando para enviar as modificações é: git push -u origin branch-dev. Ou seja, basta mudar a origem, entendeu?
 
-# 4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
+4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
 
-Unindo as branchs, comando: git merge _nome da branch de desenvolvimento_
+Unindo as branchs, comando: git merge _nomeDaDranchDeDesenvolvimento_
 
 Para enviar as moficações para o repositorio remoto, basta "adicionar as modificações, commitar" e usar o comando: git push -u origin master
