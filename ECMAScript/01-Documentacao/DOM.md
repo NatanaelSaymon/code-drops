@@ -6,6 +6,17 @@
 
 ## Javascript - addEventListener
 
+Adiciona uma função ao elemento, que é chamado de **Callback**, que será ativada assim que um certo evento ocorrer ensse elemento.
+
+```js
+const img = document.querySelector("img");
+
+// elemento.addEventListener(event, callback, options)
+img.addEventListener("click", function () {
+  console.log("Clicou");
+});
+```
+
 Todo (addEventListener) dispara uma função.
 
 ## Javascript - Bom e Dom

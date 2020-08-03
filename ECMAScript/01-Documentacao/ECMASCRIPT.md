@@ -213,3 +213,71 @@ if (possuiGraduacao) {
 ```
 
 O valor dentro dos parênteses sempre será avaliado em false ou true.
+
+**SWITCH**
+
+Com o switch você pode verificar se uma variável é igual à diferentes valores utilizando o case. Caso ela seja igual, você pode fazer alguma coisa e utilizar a palavra chave break; para cancelar a continuação. O valor de default ocorrerá caso nenhuma das anteriores seja verdadeira.
+
+```JS
+var consoleFavorito = 'Xbox';
+
+switch (corFavorita) {
+  case 'Xbox':
+    console.log('Vamos jogar Forza');
+    break;
+  case 'PS4':
+    console.log('Vamos jogar Ovewatch');
+    break;
+  case 'Switch':
+    console.log('Vamos jogar Pokemon');
+    break;
+  default:
+    console.log('Fortnite');
+}
+```
+
+**OPERADOR LÓGICO DE NEGAÇÃO !**
+
+O operador !, nega uma operação booleana. Ou seja, !true é igual a false
+
+```js
+// Truthy
+if(!true) // false
+if(!1) // false
+if(!'') // true
+if(!undefined) // true
+if(!!' ') // true
+if(!!'') // false
+```
+
+_Dica, você pode utilizar o !! para verificar se uma expressão é Truthy ou Falsy_
+
+**Dica, você pode utilizar o !! para verificar se uma expressão é Truthy ou Falsy**
+
+Vão sempre retornar um valor booleano
+
+```js
+10 > 5; // true
+5 > 10; // false
+20 < 10; // false
+10 <= 10; // true
+10 >= 11; // false
+```
+
+**OPERADORES DE COMPARAÇÃO**
+
+O == faz uma comparação não tão estrita e o === faz uma comparação estrita, ou seja, o tipo de dado deve ser o mesmo quando usamos ===
+
+```js
+10 == "10"; // true
+10 == 10; // true
+10 === "10"; // false
+10 === 10; // true
+10 != 15; // true
+10 != "10"; // false
+10 !== "10"; // true
+```
+
+---
+
+## Funções
