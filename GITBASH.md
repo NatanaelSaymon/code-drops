@@ -84,7 +84,7 @@ Para saber todos os branch: **git branch**
 
 1º Entre em seu diretorio local pelo git bash
 
-2º Dentro do seu diretorio, execute o comando: "git checkout -b _nome da branch_ aperte "enter"
+2º Dentro do seu diretorio, execute o comando: "git checkout -b _nomedabranch_ aperte "enter"
 
 3º Pronto foi criada a nova branch, apartir de agora todas as modificações e todos os commits ficaram dentro dessa nova branch.
 
