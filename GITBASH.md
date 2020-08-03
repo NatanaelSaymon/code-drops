@@ -96,6 +96,6 @@ Para saber todos os branch: **git branch**
 
 4º Fazendo um Merge (unindo as modificações): Para isso, voce tem que está dentro da branch padrão. Para mudar de branch, comando: git checkout master "aperte enter".
 
-Unindo as branchs, comando: git merge _nomeDaDranchDeDesenvolvimento_
+Unindo as branchs, comando: git merge _nomeDaBranchDeDesenvolvimento_
 
 Para enviar as moficações para o repositorio remoto, basta "adicionar as modificações, commitar" e usar o comando: git push -u origin master
