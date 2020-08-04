@@ -280,4 +280,77 @@ O == faz uma comparação não tão estrita e o === faz uma comparação estrita
 
 ---
 
-## Funções
+## FUNÇÕES
+
+Bloco de código que pode sr executado e reutilziado. Valores podem ser passados por uma função e a mesma retorna outro valor.
+
+```js
+function areaQuadrado(lado) {
+  return lado * lado;
+}
+
+areaQuadrado(4); // 16
+areaQuadrado(5); // 25
+areaQuadrado(2); // 4
+```
+
+**PARÂMETROS E ARGUMENTO**
+
+Ao **criar** uma função, você pode definir **parâmetros**.
+
+Ao **executar** uma função, você pode passar **argumentos**.
+
+```js
+// peso e altura são os parâmetros
+function imc(peso, altura) {
+  const imc = peso / altura ** 2;
+  return imc;
+}
+
+console.log(imc(80, 1.8)); // 80 e 1.80 são os argumentos
+console.log(imc(60, 1.7)); // 60 e 1.70 são os argumentos
+```
+
+**PARENTESES EXECUTA A FUNÇÃO**
+
+```js
+function corFavorita(cor) {
+  if (cor === "azul") {
+    return "Você gosta do céu";
+  } else if (cor === "verde") {
+    return "Você gosta de mato";
+  } else {
+    return "Você não gosta de nada";
+  }
+}
+corFavorita(); // retorna 'Você não gosta de nada'
+```
+
+_Se apenas definirmos a função com o function e não executarmos a mesma, nada que estiver dentro dela irá acontecer_
+
+**ARGUMENTOS PODEM SER FUNÇÕES**
+
+Chamadas de Callback, geralmente são funções que ocorrem após algum evento.
+
+```js
+addEventListener("click", function () {
+  console.log("Clicou");
+});
+// A função possui dois argumentos
+// Primeiro é a string 'click'
+// Segundo é uma função anônima
+```
+
+Funções anônimas são aquelas em que o nome da função não é definido, escritas como **function() {}** ou **() => {}**
+
+**ESCOPO**
+
+Variáveis e funções definidas dentro de um bloco **{}**, não são visíveis fora dele.
+
+```js
+function precisoVisitar(paisesVisitados) {
+  var totalPaises = 193;
+  return `Ainda faltam ${totalPaises - paisesVisitados} paises para visitar`;
+}
+console.log(totalPaises); // erro, totalPaises não definido
+```
