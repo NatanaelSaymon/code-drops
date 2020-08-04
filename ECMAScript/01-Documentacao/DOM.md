@@ -1,14 +1,15 @@
-<div class="center" style="text-align :center;">
+<p align="center">
 
-# Dicas/Lembretes: DOM - Javascript
+# JAVASCRIPT - DOM
 
-</div>
+</p>
 
-<div style="text-align: center">
+<p align="center">
 
-<img src="https://www.origamid.com/slide/javascript-completo-es6/aulas/03-dom-para-iniciantes/0301-o-que-e-o-dom/dom.svg" width="300px">
+<img src="https://www.origamid.com/slide/javascript-completo-es6/aulas/03-dom-para-iniciantes/0301-o-que-e-o-dom/dom.svg" width="90%">
 
-</div>
+</p>
+
 ## Javascript - addEventListener
 
 Adiciona uma função ao elemento, que é chamado de **Callback**, que será ativada assim que um certo evento ocorrer ensse elemento.

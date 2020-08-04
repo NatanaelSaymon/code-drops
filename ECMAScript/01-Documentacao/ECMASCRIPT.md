@@ -1,6 +1,6 @@
 <div class="center" style="text-align :center;">
 
-# Javascript
+# JAVASCRIPT
 
 </div>
 
