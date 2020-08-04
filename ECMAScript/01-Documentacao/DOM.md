@@ -33,19 +33,6 @@ Dom: document
 - Ao criar uma função, você pdoe definir parâmetros.
 - Ao executar um função, você pode passar argumentos.
 
-## Metodo e Propriedade
-
-```js
-let nome = "Natan";
-console.log(nome.toLowerCase());
-console.log(nome.length);
-
-/*
-toLowerCase(): é um metodo.
-length: é uma propriedade.
-*/
-```
-
 ## ForEach
 
 Constantemente vamos selecionar uma lista de itens do dom. A melhor forma para interagirmos com os mesmos é utilizando o método forEach.
@@ -55,18 +42,6 @@ const videoGame = ["Xbox X", "PS4", "Switch"];
 videoGame.forEach(function (item) {
   console.log(item);
 });
-```
-
-## Operador Ternario
-
-Abreviação de condicionais com if e else
-
-```js
-var idade = 19;
-var podeBeber = idade >= 18 ? "Pode beber" : "Não pode beber";
-console.log(podeBeber); // Pode beber
-
-// condição ? true : false
 ```
 
 _Geralmente utilizado quando precisamos atribuir um valor para uma variável, dependendo de uma condição_

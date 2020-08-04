@@ -354,3 +354,159 @@ function precisoVisitar(paisesVisitados) {
 }
 console.log(totalPaises); // erro, totalPaises não definido
 ```
+
+## OBEJTOS
+
+Conjuntos de variaveis e funções, que são chamadas de propriedades e métodos. Declaração de Objetos **let pessoa = {}**
+
+```js
+var pessoa = {
+  nome: "Natanael",
+  idade: 28,
+  profissao: "Desenvolvedor Web",
+  possuiFaculdade: true,
+};
+
+pessoa.nome; // 'Natanael'
+pessoa.possuiFaculdade; // true
+```
+
+_Propriedades e métodos consistem em nome (chave) e valor_
+
+**MÉTODOS**
+
+É uma propriedade que possui uma função no local do seu valor.
+
+```js
+var quadrado = {
+  lados: 4,
+  area: function (lado) {
+    return lado * lado;
+  },
+  perimetro: function (lado) {
+    return this.lados * lado;
+  },
+};
+
+quadrado.lados; // 4
+quadrado.area(5); // 25
+quadrado.perimetro(5); // 20
+```
+
+Abreviação de area: function() {} para area() {}, no ES6+
+
+```js
+var quadrado = {
+  lados: 4,
+  area(lado) {
+    return lado * lado;
+  },
+  perimetro(lado) {
+    return this.lados * lado;
+  },
+};
+```
+
+Todo Metodo retorna um objeto!
+
+Ex: **getBoundingClientRect()**
+
+_Esse metodo retorna varias propriedades, como: width, height, etc. Então se quisermos somente a altura do elemento basta pegar somente a propriedade que retorna a altura(height). Console.log(rect.height)_
+
+```js
+let nome = "Natan";
+console.log(nome.toLowerCase());
+console.log(nome.length);
+
+/*
+toLowerCase(): é um metodo.
+length: é uma propriedade.
+*/
+```
+
+**DOT NOTATION GET**
+
+Acesse propriedades de um objeto utilizando o ponto **.**
+
+```js
+var menu = {
+  width: 800,
+  height: 50,
+  backgroundColor: "#84E",
+};
+
+var bg = menu.backgroundColor; // '#84E'
+```
+
+Substitua o valor de uma propriedade utilizando . e o = após o nome da mesma.
+
+```js
+var menu = {
+  width: 800,
+  height: 50,
+  backgroundColor: "#84E",
+};
+
+menu.backgroundColor = "#000";
+console.log(menu.backgroundColor); // '#000'
+```
+
+**ADICIONAR PROPRIEDADES E MÉTODOS**
+
+Basta adicionar um novo nome e definir o valor.
+
+```js
+var menu = {
+  width: 800,
+};
+
+menu.height = 50;
+menu.position = "fixed";
+```
+
+**PALAVRA-CHAVE THIS**
+
+this irá fazer uma referência ao próprio objeto.
+
+```js
+var height = 120;
+var menu = {
+  width: 800,
+  height: 50,
+  metadeHeight() {
+    return this.height / 2;
+  },
+};
+
+menu.metadeHeight(); // 25
+// sem o this, seria 60
+```
+
+## OPERADORES DE ATRIBUIÇÃO
+
+Podem funcionar como formas abreviadas
+
+```js
+var x = 5;
+var y = 10;
+x += y; // x = x + y (15)
+x -= y; // x = x - y (-5)
+x *= y; // x = x * y (50)
+x /= y; // x = x / y (0.5)
+x %= y; // x = x % y (0)
+x **= y; // x = x ** y (9765625)
+```
+
+**Operador Ternario**
+
+Abreviação de condicionais com if e else
+
+```js
+var idade = 19;
+var podeBeber = idade >= 18 ? "Pode beber" : "Não pode beber";
+console.log(podeBeber); // Pode beber
+
+// condição ? true : false
+```
+
+_Geralmente utilizado quando precisamos atribuir um valor para uma variável, dependendo de uma condição_
