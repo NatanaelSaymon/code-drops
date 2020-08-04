@@ -497,7 +497,83 @@ x %= y; // x = x % y (0)
 x **= y; // x = x ** y (9765625)
 ```
 
-**Operador Ternario**
+## Array
+
+É um grupo de valores geralmente relacionados. Servem para guardarmos diferentes valores em um unica variavel.
+
+```js
+var videoGames = ["Switch", "PS4", "XBox"];
+
+videoGames[0]; // Switch
+videoGames[2]; // Xbox
+```
+
+_Acesse um elemento do array utilizando o []_
+
+**Metodos e propriedadesd de um Array**
+
+```js
+var videoGames = ["Switch", "PS4", "XBox"];
+
+videoGames.pop(); // Remove o último item e retorna ele
+videoGames.push("3DS"); // Adiciona ao final da array
+videoGames.length; // 3
+```
+
+_Existem diversos outros métodos, como map, reduce, forEach e mais que veremos mais à frente_
+
+**For Loop**
+
+Fazem algo repetidamente até que uma condição seja atingida.
+
+```js
+for (let n = 0; n < 10; n++) {
+  console.log(n);
+}
+// Retorna de 0 a 9 no console
+```
+
+_O for loop possui 3 partes, início, condição e incremento_
+
+**Arrays e Loop**
+
+```js
+var videoGames = ["Switch", "PS4", "XBox", "3DS"];
+for (var i = 0; i < videoGames.length; i++) {
+  console.log(videoGames[i]);
+}
+```
+
+**Break**
+
+O loop irá parar caso encontre o comando **Break**.
+
+```js
+var videoGames = ["Switch", "PS4", "XBox", "3DS"];
+for (var i = 0; i < videoGames.length; i++) {
+  console.log(videoGames[i]);
+  if (videoGames[i] === "PS4") {
+    break;
+  }
+}
+```
+
+**ForEach**
+
+ForEach é um metodo que executa uma função para cada item do Array. É uma forma mais simples de utilizarmos um loop com arrays
+(ou array-like).
+
+```js
+var videoGames = ["Switch", "PS4", "XBox", "3DS"];
+videoGames.forEach(function (item) {
+  console.log(item);
+});
+// O argumento item será atribuído dinamicamente
+```
+
+_Podemos passar os seguintes parâmetros **item**, **index** e **array** ._
+
+## Operador Ternario
 
 Abreviação de condicionais com if e else
 
@@ -510,3 +586,154 @@ console.log(podeBeber); // Pode beber
 ```
 
 _Geralmente utilizado quando precisamos atribuir um valor para uma variável, dependendo de uma condição_
+
+## ESCOPO
+
+**Escopo de Função**
+
+Variáveis declaradas dentro de funções não são acessadas fora das mesmas.
+
+```js
+function mostrarCarro() {
+  var carro = "Fusca";
+  console.log(carro);
+}
+
+mostrarCarro(); // Fusca no console
+console.log(carro); // Erro, carro is not defined
+```
+
+_Escopo evita o conflito entre nomes._
+
+**VARIÁVEL GLOBAL (ERRO)**
+
+Declarar variáveis sem a palavra chave **var**, **const** ou **let**, cria uma variável que pode ser acessar em qualquer escopo (global). Isso é um erro.
+
+```js
+function mostrarCarro() {
+  carro = "Fusca";
+  console.log(carro);
+}
+
+mostrarCarro(); // Fusca
+console.log(carro); // Fusca
+```
+
+**ESCOPO DE FUNÇÃO (PAI)**
+
+Variáveis declaradas no escopo pai da função, conseguem ser acessadas pelas funções.
+
+```js
+var carro = "Fusca";
+
+function mostrarCarro() {
+  var frase = `Meu carro é um ${carro}`;
+  console.log(frase);
+}
+
+mostrarCarro(); // Meu carro é um Fusca
+console.log(carro); // Fusca
+```
+
+**ESCOPO DE BLOCO**
+
+Variáveis criadas com var, vazam o bloco. Por isso com a introdução do ES6 a melhor forma de declarmos uma variável é utilizando const e let, pois estas respeitam o escopo de bloco.
+
+```js
+if (true) {
+  var carro = "Fusca";
+  console.log(carro);
+}
+console.log(carro); // Carro
+```
+
+**VAR VAZA O BLOCO**
+
+Mesmo com a condição falsa, a variável ainda será declarada utilizando hoisting e o valor ficará como undefined.
+
+```js
+if (false) {
+  var carro = "Fusca";
+  console.log(carro);
+}
+console.log(carro); // undefined
+```
+
+**CONST E LET NO LUGAR DE VAR**
+
+A partir de agora utilize apenas **const** e **let** para declarmos variáveis.
+
+```js
+if (true) {
+  const carro = "Fusca";
+  console.log(carro);
+}
+console.log(carro); // erro, carro is not defined
+```
+
+**{} CRIA UM BLOCO**
+
+Chaves {} criam um escopo de bloco, não confundir com a criação de objetos = {}
+
+```js
+{
+  var carro = "Fusca";
+  const ano = 2018;
+}
+console.log(carro); // Carro
+console.log(ano); // erro ano is not defined
+```
+
+**FOR LOOP**
+
+Ao utilizar var dentro de um forloop, que é um bloco, o valor do variável utilizada irá vazar e existir fora do loop.
+
+```js
+for (var i = 0; i < 10; i++) {
+  console.log(`Número ${i}`);
+}
+console.log(i); // 10
+```
+
+**FOR LOOP COM LET**
+
+Com o **let** evitamos que o número vaze.
+
+```js
+Com o let evitamos que o número vaze.
+```
+
+**CONST**
+
+Mantém o escopo no bloco, impede a redeclaração e impede a modificação do valor da variável, evitando bugs no código.
+
+```js
+const mes = 'Dezembro';
+mes = 'Janeiro'; // erro, tentou modificar o valor
+const semana; // erro, declarou sem valor
+
+const data = {
+  dia: 28,
+  mes: 'Dezembro',
+  ano: 2018,
+}
+
+data.dia = 29; // Funciona
+data = 'Janeiro'; // erro
+
+```
+
+_Variáveis com valores constantes devem utilizar o const._
+
+**LET**
+
+Mantém o escopo no bloco, impede a redeclaração, mas permite a modificação do valor da variável.
+
+```js
+let ano;
+ano = 2018;
+ano++;
+console.log(ano); // 2019
+
+let ano = 2020; // erro, redeclarou a variável
+```
