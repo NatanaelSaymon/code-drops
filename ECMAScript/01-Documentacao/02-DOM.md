@@ -467,3 +467,37 @@ window.addEventListener("scroll", callback);
 window.addEventListener("resize", callback);
 window.addEventListener("keydown", callback);
 ```
+
+**KEYBORD**
+
+Você pode adicionar atalhos para facilitar a navegação no seu site, através de eventos do keyboard.
+
+```JS
+function handleKeyboard(event) {
+  if(event.key === 'a')
+    document.body.classList.toggle('azul');
+  else if(event.key === 'v')
+    document.body.classList.toggle('vermelho');
+}
+
+window.addEventListener('keydown', callback);
+
+```
+
+**FOREACH**
+
+O método addEventListener é adicionado à um único elemento, então é necessário um loop entre elementos de uma lista, para adicionarmos à cada um deles.
+
+```JS
+const imgs = document.querySelectorAll('img');
+
+function imgSrc(event) {
+  const src = event.currentTarget.getAttribute('src');
+  console.log(src);
+}
+
+imgs.forEach((img) => {
+  img.addEventListener('click', imgSrc);
+});
+
+```
