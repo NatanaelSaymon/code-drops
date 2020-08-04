@@ -245,7 +245,120 @@ imgs.forEach(item => console.log(item));
 
 _Não é permitido fechar a linha com ;_
 
-## Javascript - addEventListener
+**CLASSLIST**
+
+Retorna uma lista com as classes do elemento. Permite adicionar, remover e verificar se contém.
+
+```JS
+const menu = document.querySelector('.menu');
+
+menu.className; // string
+menu.classList; // lista de classes
+menu.classList.add('ativo');
+menu.classList.add('ativo', 'mobile'); // duas classes
+menu.classList.remove('ativo');
+menu.classList.toggle('ativo'); // adiciona/remove a classe
+menu.classList.contains('ativo'); // true ou false
+menu.classList.replace('ativo', 'inativo');
+```
+
+**ATTRIBUTE**
+
+Retorna um array-like com os atributos do elemento
+
+```js
+const animais = document.querySelector(".animais");
+
+animais.attributes; // retorna todos os atributos
+animais.attributes[0]; // retorna o primeiro atributo
+```
+
+**GETATTRIBUTE E SETATTRIBUTE**
+
+Métodos que retornam ou definem de acordo com o atributo selecionado
+
+```js
+const img = document.querySelector("img");
+
+img.getAttribute("src"); // valor do src
+img.setAttribute("alt", "Texto Alternativo"); // muda o alt
+img.hasAttribute("id"); // true / false
+img.removeAttribute("alt"); // remove o alt
+
+img.hasAttributes(); // true / false se tem algum atributo
+```
+
+## DIMENSÕES E DISTÂNCIA
+
+**HEIGHT E WIDTH**
+
+Estas são propriedades e métodos dos objetos Element e HTMLElement, a maioria delas são Read Only.
+
+```js
+const section = document.querySelector(".animais");
+
+section.clientHeight; // height + padding
+section.offsetHeight; // height + padding + border
+section.scrollHeight; // height total, mesmo dentro de scroll
+```
+
+**OFFSETTOP E OFFSETLEFT**
+
+```js
+const section = document.querySelector(".animais");
+
+// Distância entre o topo do elemento e o topo da página
+section.offsetTop;
+
+// Distância entre o canto esquerdo do elemento
+// e o canto esquerdo da página
+section.offsetLeft;
+```
+
+**GETBOUNDINGCLIENTRECT()**
+
+Método que retorna um objeto com valores de width, height, distâncias do elemento e mais.
+
+```js
+const section = document.querySelector(".animais");
+
+const rect = section.getBoundingClientRect();
+rect.height; // height do elemento
+rect.width; // width do elemento
+rect.top; // distância entre o topo do elemento e o scroll
+```
+
+**WINDOW**
+
+```js
+window.innerWidth; // width do janela
+window.outerWidth; // soma dev tools também
+window.innerHeight; // height do janela
+window.outerWidth; // soma a barra de endereço
+
+window.pageYOffset; // distância total do scroll horizontal
+window.pageXOffset; // distância total do scroll vertical
+
+if (window.innerWidth < 600) {
+  console.log("Tela menor que 600px");
+}
+```
+
+**MATCHMEDIA();**
+
+Utilize um media-querie como no CSS para verificar a largura do browser
+
+```js
+const small = window.matchMedia("(max-width: 600px)");
+
+if (small.matches) {
+  console.log("Tela menor que 600px");
+} else {
+  console.log("Tela maior que 600px");
+}
+```
+
+## ADDEVENTLISTENER
 
 Adiciona uma função ao elemento, que é chamado de **Callback**, que será ativada assim que um certo evento ocorrer ensse elemento.
 
@@ -258,55 +371,99 @@ img.addEventListener("click", function () {
 });
 ```
 
-Todo (addEventListener) dispara uma função.
+_Todo (addEventListener) dispara uma função._
 
-## Adicionando um evento no carregamento do pagina:
+**CALLBACK**
 
-```html
-<div id="dv1"></div>
+É boa prática separar a função de callback do addEventListener, ou seja, declarar uma função ao invés de passar diretamente uma função anônima
+
+```JS
+const img = document.querySelector('img');
+function callback() {
+  console.log('Clicou');
+}
+
+img.addEventListener('click', callback); // Correto 🚀
+
+img.addEventListener('click', callback()); // Errado, resultado: undefined
 ```
+
+**EVENT**
+
+O primeiro parâmetro do callback é referente ao evento que ocorreu.
 
 ```js
-function msg() {
-  alert("Olá");
+const img = document.querySelector("img");
+
+function callback(event) {
+  console.log(event);
 }
 
-function addEvento() {
-  document.querySelector("#dv1").addEventListener("click", msg);
-}
-
-window.addEventListener("load", addEvento);
+img.addEventListener("click", callback);
 ```
 
-Explicação: quando a janela do browser carregar **load**, a função **addEvento** irá carregar, e quando o usuario clicar na div, vai ser disparada a função!
-
-## Passando uma função com parametros
-
-```html
-<div id="dv1"></div>
-```
+**PROPRIEDADES DO EVENT**
 
 ```js
-function msg() {
-  alert("Olá");
+const animaisLista = document.querySelector(".animais-lista");
+
+function executarCallback(event) {
+  const currentTarget = event.currentTarget; // this
+  const target = event.target; // onde o clique ocorreu
+  const type = event.type; // tipo de evento
+  const path = event.path;
+  console.log(currentTarget, target, type, path);
 }
 
-function bgColor(div, color) {
-  div.style.backgroundColor = color;
+animaisLista.addEventListener("click", executarCallback);
+```
+
+**EVENT.PREVENTDEFAULT()**
+
+Previne o comportamento padrão do evento no browser. No caso de um link externo, por exemplo, irá previnir que o link seja ativado.
+
+```js
+const linkExterno = document.querySelector('a[href^="http"]');
+
+function clickNoLink(event) {
+  event.preventDefault();
+  console.log(event.currentTarget.href);
 }
 
-function addEvento() {
-  div = document.querySelector("#dv1");
-  div.addEventListener("click", msg);
+linkExterno.addEventListener("click", clickNoLink);
+```
 
-  div.addEventListener("mouseover", function (event) {
-    color(div, "#fff");
-  });
+**THIS**
 
-  div.addEventListener("mouseout", function (event) {
-    color(div, "#ccc");
-  });
+A palavra chave this é uma palavra especial de JavaScript, que pode fazer referência a diferentes objetos dependendo do contexto. No caso de eventos, ela fará referência ao elemento em que addEventListener foi adicionado.
+
+```js
+const img = document.querySelector("img");
+
+function callback(event) {
+  console.log(this); // retorna a imagem
+  console.log(this.getAttribute("src"));
 }
 
-window.addEventLisneter("load", addEvento);
+img.addEventListener("click", callback);
+```
+
+_Geralmente igual ao event.currentTarget_
+
+**DIFERENTES EVENTOS**
+
+Existem diversos eventos como **click**, **scroll**, **resize**, **keydown**, **keyup**, **mouseenter** e mais. Eventos podem ser adicionados a diferentes elementos, como o **window** e **document** também.
+
+```js
+const h1 = document.querySelector("h1");
+
+function callback(event) {
+  console.log(event.type, event);
+}
+
+h1.addEventListener("click", callback);
+h1.addEventListener("mouseenter", callback);
+window.addEventListener("scroll", callback);
+window.addEventListener("resize", callback);
+window.addEventListener("keydown", callback);
 ```
