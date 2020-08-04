@@ -1,6 +1,6 @@
 <div class="center" style="text-align :center;">
 
-# Dicas/ Lembrentes: Javascript
+# Javascript
 
 </div>
 
