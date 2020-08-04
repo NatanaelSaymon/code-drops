@@ -78,9 +78,9 @@ possuiFaculdade = false;
 
 ---
 
-## Tipos de dados
+## TIPOS DE DADOS
 
-**7 Tipos de dados**
+**7 TIPOS DE DADOS**
 
 Todos são primitivos exceto os objetos.
 
@@ -102,7 +102,7 @@ console.log(typeof nome);
 // retorna string
 ```
 
-**typeof null retorna object**
+_typeof null retorna object_
 
 ---
 
@@ -117,7 +117,7 @@ var expoente = 2 ** 4; // 16
 var modulo = 14 % 5; // 4
 ```
 
-**Lembrando que soma + em Strings serve para concatenar**
+_Lembrando que soma + em Strings serve para concatenar_
 
 ## OPERADORES ARITMÉTICOS (STRINGS)
 
@@ -128,7 +128,7 @@ var multiplicacao = "100" * "2"; // 200
 var divisao = "Comprei 10" / 2; // NaN (Not a Number)
 ```
 
-**É possível verificar se uma variável é NaN ou não com a função isNaN()**
+_É possível verificar se uma variável é NaN ou não com a função isNaN()_
 
 ## NAN = NOT A NUMBER
 
@@ -150,7 +150,7 @@ var total3 = (20 / 2) * 5; // 50
 var total4 = 10 + 10 * 2 + 20 / 2; // 40
 ```
 
-**Parênteses para priorizar uma expressão**
+_Parênteses para priorizar uma expressão_
 
 ## OPERADORES ARITMÉTICOS UNÁRIOS
 
@@ -186,7 +186,7 @@ console.log(+possuiFaculdade); // 1
 
 ---
 
-## Boolean e Condicionais
+## BOOLEAN e CONDICIONAIS
 
 **BOOLEAN**
 
@@ -251,8 +251,6 @@ if(!!'') // false
 ```
 
 _Dica, você pode utilizar o !! para verificar se uma expressão é Truthy ou Falsy_
-
-**Dica, você pode utilizar o !! para verificar se uma expressão é Truthy ou Falsy**
 
 Vão sempre retornar um valor booleano
 
@@ -497,7 +495,7 @@ x %= y; // x = x % y (0)
 x **= y; // x = x ** y (9765625)
 ```
 
-## Array
+## ARRAY
 
 É um grupo de valores geralmente relacionados. Servem para guardarmos diferentes valores em um unica variavel.
 
@@ -510,7 +508,7 @@ videoGames[2]; // Xbox
 
 _Acesse um elemento do array utilizando o []_
 
-**Metodos e propriedadesd de um Array**
+**METODOS E PROPRIEDADE DE UM ARRAY**
 
 ```js
 var videoGames = ["Switch", "PS4", "XBox"];
@@ -522,7 +520,7 @@ videoGames.length; // 3
 
 _Existem diversos outros métodos, como map, reduce, forEach e mais que veremos mais à frente_
 
-**For Loop**
+**FOR LOOP**
 
 Fazem algo repetidamente até que uma condição seja atingida.
 
@@ -535,7 +533,7 @@ for (let n = 0; n < 10; n++) {
 
 _O for loop possui 3 partes, início, condição e incremento_
 
-**Arrays e Loop**
+**ARRAYS E LOOP**
 
 ```js
 var videoGames = ["Switch", "PS4", "XBox", "3DS"];
@@ -544,7 +542,7 @@ for (var i = 0; i < videoGames.length; i++) {
 }
 ```
 
-**Break**
+**BREAK**
 
 O loop irá parar caso encontre o comando **Break**.
 
@@ -558,7 +556,7 @@ for (var i = 0; i < videoGames.length; i++) {
 }
 ```
 
-**ForEach**
+**FOREACH**
 
 ForEach é um metodo que executa uma função para cada item do Array. É uma forma mais simples de utilizarmos um loop com arrays
 (ou array-like).
@@ -589,7 +587,7 @@ _Geralmente utilizado quando precisamos atribuir um valor para uma variável, de
 
 ## ESCOPO
 
-**Escopo de Função**
+**ESCOPO DE FUNÇÃO**
 
 Variáveis declaradas dentro de funções não são acessadas fora das mesmas.
 
