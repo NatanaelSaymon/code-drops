@@ -24,7 +24,7 @@ _Ao inspecionar elemento com o Chrome, você está vendo a representação ofici
 
 </p>
 
-## WINDOW E DOCUMENT
+**WINDOW E DOCUMENT**
 
 São os objetos principais do DOM, boa parte da manipulação é feita através dos seus métodos e propriedades.
 
@@ -43,7 +43,7 @@ document.body; // Retorna o body
 
 _window é o objeto global, por isso não precisamos chamar ele na frente dos seus métodos e propriedades._
 
-## NODE
+**NODE**
 
 Toda tag html é representada pelo objeto Element e por isso herda os seus métodos e propriedades. Element é um tipo de objeto Node.
 
@@ -59,7 +59,7 @@ titulo.addEventListener("click", callback);
 // ativa a função callback ao click no titulo
 ```
 
-## ID
+**ID**
 
 **getElementById** seleciona e retorna elementos do DOM
 
@@ -72,7 +72,7 @@ const contatoSection = document.getElementById("contato");
 const naoExiste = document.getElementById("teste");
 ```
 
-## CLASSE E TAG
+**CLASSE E TAG**
 
 **getElementsByClassName** e **getElementsByTagName** selecionam e retornam uma lista de elementos do DOM. A lista retornada está ao vivo, significa que se elementos forem adicionados, ela será automaticamente atualizada.
 
@@ -88,7 +88,7 @@ const ul = document.getElementsByTagName("ul");
 console.log(gridSection[0]);
 ```
 
-## SELETOR GERAL E UNICO
+**SELETOR GERAL E UNICO**
 
 **querySelector** retorna o primeiro elemento que combinar com o seu seletor CSS.
 
@@ -103,7 +103,7 @@ const primeiroUl = document.querySelector("ul");
 const navItem = primeiroUl.querySelector("li");
 ```
 
-## SELETOR GERAL LISTA
+**SELETOR GERAL LISTA**
 
 **querySelectorAll** retorna todos os elementos compatíveis com o seletor CSS em uma NodeList.
 
@@ -117,7 +117,7 @@ const fotosAnimais = document.querySelectorAll(".animais-lista img");
 console.log(gridSection[1]);
 ```
 
-## HTMLCOLLECTION VS NODELIST
+**HTMLCOLLECTION VS NODELIST**
 
 A diferença está nos métodos e propriedades de ambas. Além disso a NodeList retornada com querySelectorAll é estática.
 
@@ -132,7 +132,7 @@ console.log(gridSectionHTML); // 4 itens
 console.log(gridSectionNode); // 3 itens
 ```
 
-## ARRAY-LIKE
+**ARRAY-LIKE**
 
 HTMLCollection e NodeList são array-like, parecem uma array mas não são. O método de Array forEach() por exemplo, existe apenas em NodeList.
 
@@ -151,6 +151,100 @@ _É possível transformar array-like em uma Array real, utilizando o método Arr
 
 ## FOREACH E ARROWFUNCTION
 
+**FOREACH**
+
+Constantemente vamos selecionar uma lista de itens do dom. A melhor forma para interagirmos com os mesmos é utilizando o método forEach.
+
+```js
+const imgs = document.querySelectorAll("img");
+
+imgs.forEach(function (item) {
+  console.log(item);
+});
+```
+
+**PARAMETROS DO FOREACH**
+
+O primeiro parâmetro é o callback, ou seja, a função que será ativada a cada item. Esse função pode receber três parâmetros: valorAtual, index e array;
+
+```JS
+const imgs = document.querySelectorAll('img');
+
+imgs.forEach(function(valorAtual, index, array){
+  console.log(item); // o item atual no loop
+  console.log(index); // o número do index
+  console.log(array); // a Array completa
+});
+
+```
+
+**FOREACH E ARRAY**
+
+forEach é um método de Array, alguns objetos array-like possuem este método. Caso não possua, o ideal é transformá-los em uma array.
+
+```JS
+const titulos = document.getElementsByClassName('titulo');
+const titulosArray = Array.from(titulos);
+
+titulosArray.forEach(function(item){
+  console.log(item);
+});
+
+```
+
+**ARROW FUNCTION**
+
+Sintaxe curta em relação a function expression. Basta remover a palavra chave function e adicionar a fat arrow => após os argumentos.
+
+```JS
+const imgs = document.querySelectorAll('img');
+
+imgs.forEach((item) => {
+  console.log(item);
+});
+
+```
+
+**ARGUMENTOS E PARENTESES**
+
+```JS
+const imgs = document.querySelectorAll('img');
+
+// argumento único não precisa de parênteses
+imgs.forEach(item => {
+  console.log(item);
+});
+
+// multiplos argumentos precisam de parênteses
+imgs.forEach((item, index) => {
+  console.log(item, index);
+});
+
+// sem argumentos precisa dos parênteses, mesmo vazio
+let i = 0;
+imgs.forEach(() => {
+  console.log(i++);
+});
+
+```
+
+**RETURN**
+
+É possível omitir as chaves {} para uma função que retorna uma linha.
+
+```JS
+const imgs = document.querySelectorAll('img');
+
+imgs.forEach(item =>
+  console.log(item)
+);
+
+imgs.forEach(item => console.log(item));
+
+```
+
+_Não é permitido fechar a linha com ;_
+
 ## Javascript - addEventListener
 
 Adiciona uma função ao elemento, que é chamado de **Callback**, que será ativada assim que um certo evento ocorrer ensse elemento.
@@ -165,24 +259,6 @@ img.addEventListener("click", function () {
 ```
 
 Todo (addEventListener) dispara uma função.
-
-## Javascript - Parâmentros e Argumentos
-
-- Ao criar uma função, você pdoe definir parâmetros.
-- Ao executar um função, você pode passar argumentos.
-
-## ForEach
-
-Constantemente vamos selecionar uma lista de itens do dom. A melhor forma para interagirmos com os mesmos é utilizando o método forEach.
-
-```js
-const videoGame = ["Xbox X", "PS4", "Switch"];
-videoGame.forEach(function (item) {
-  console.log(item);
-});
-```
-
-_Geralmente utilizado quando precisamos atribuir um valor para uma variável, dependendo de uma condição_
 
 ## Adicionando um evento no carregamento do pagina:
 

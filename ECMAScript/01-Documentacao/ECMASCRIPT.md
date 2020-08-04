@@ -19,7 +19,7 @@ const possuiFaculdade = true;
 Utilizei a vírgula para criar mais de uma variável, sem repetir a palavra chave var.
 
 ```JS
-var nome = 'André',
+var nome = 'Natanael',
     idade = 28,
     possuiFaculdade = true;
 
@@ -698,7 +698,10 @@ console.log(i); // 10
 Com o **let** evitamos que o número vaze.
 
 ```js
-Com o let evitamos que o número vaze.
+for (let i = 0; i < 10; i++) {
+  console.log(`Número ${i}`);
+}
+console.log(i); // i is not defined
 ```
 
 **CONST**
