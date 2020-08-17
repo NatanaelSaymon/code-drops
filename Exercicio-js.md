@@ -42,5 +42,5 @@ const transacoes02 = [
 ## Crie uma função para Limpe os valores, retirando os espaços, arredondando os valores +/-. Usando o forEach soma os valores. Coverter os valores na moeda americana e brasileira. https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 ```js
-const listaPreco = [" R$ 59,99 ", " R$ 100,22 ", "r$ 200,03 "];
+const listaPreco = [" R$ 59,99 ", " RS 100,22 ", "r$ 200,03 "];
 ```
