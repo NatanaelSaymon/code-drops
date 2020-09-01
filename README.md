@@ -1,1 +1,1 @@
-Repositorio criado para postagem de codigos prontos e documentação da linguagem javascript.
+Repositorio criado para postagem de codigos prontos.
