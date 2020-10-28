@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+/* HEADER - BEGIN */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #181818;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    font-size: 20px;
+    color: #ccc;
+    padding: 10px;
+}
+
+.nav-bar ul li a:hover {
+    background: #ccc;
+    color: #333;
+}
+/* HEADER - END */
+
+
+
+/* SECTION BANNER - BEGIN */
+.banner {
+    height: calc(100vh - 100px); /*calculo feito para retirar o tamanho do menu*/
+    overflow: hidden; /*tudo que passar da area do banner vai ser cortado*/
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    transition: all ease 1s; /*transicao de slides para slides*/
+}
+
+.slider__item {
+    width: 100vw;
+    height: inherit;
+    background-image: url('../image/bg-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider__controls {
+    position: absolute; /*para ficar por cima dos slides*/
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /*joga os botoes para so cantos*/
+    align-items: center; /*alinhando os botoes no centro dos slides*/
+}
+
+.slider__controls i {
+    color: #ffffff;
+    font-size: 50px;
+    cursor: pointer;
+}
+/* SECTION BANNER - END */
+
+
+.container {
+    padding: 0 10px;
+}
+
+.container p {
+    text-align: justify;
+}
+
+

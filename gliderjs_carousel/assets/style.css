@@ -1,0 +1,20 @@
+.c-carousel{
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.c-carousel__slides{
+    overflow: hidden;
+    border: 1px solid #a89cc8;
+}
+
+.c-carousel__slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    color: gray;
+    border-left: 1px solid #a89cc8;
+    font-size: 200%;
+}
+
