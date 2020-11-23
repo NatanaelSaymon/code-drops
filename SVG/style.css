@@ -1,0 +1,21 @@
+svg {
+    display: block; 
+    max-width: 60px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/*
+    Com o display block, podemos centralizar o svg onde queremos e aumentar 
+    o tamanho dele.
+
+    Para alterar a cor do SVG basta ir no style dele, e alterar a cor. 
+    O style do svg fica dentro da propria tag.
+*/
+
+
+
+
+
+
+
