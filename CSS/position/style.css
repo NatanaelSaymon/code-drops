@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  font-size: 60px;
+  padding: 30px;
+  border: solid 5px #222;
+}
+
+.static {
+  top: 100px;
+  left: 100px;
+  background: steelblue;
+}
+
+.fixed {
+  position: fixed; /*Fixa na tela de forma abosulta*/
+  bottom: 30px;
+  right: 0px;
+  background: tomato;
+}
+
+.relative1 {
+  position: relative; /*Leva em consideração o elemento anterior*/
+  left: 50px;
+  top: 5px;
+  background: seagreen;
+}
+
+.absolute1 {
+  position: absolute; /*Se mantem de forma absoluta em relação o elemento pai "neste caso o body"*/
+  left: 350px;
+  top: 120px;
+  background: violet;
+}
+
+.relative2 {
+  position: relative; /*Leva em consideração o elemento anterior*/
+  left: 250px;
+  top: 1000px;
+  width: 200px;
+  height: 200px;
+  background: slategray;
+}
+
+.absolute2 {
+  position: absolute; /*Se mantem de forma absoluta em relação o elemento pai neste caso "div relative2"*/
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: orange;
+}
+
+.sticky {
+  position: -webkit-sticky; /*Para o Safari*/
+  position: sticky;
+  background: #777;
+  top: 0px;
+}
+
+.paragrafo {
+  margin-bottom: 1000px;
+}
