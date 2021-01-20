@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela</title>
+    </head>
+
+    <body>
+        <h1>Tabela basica</h1>
+        <!-- TABELA BASICA -->
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+            </tr>
+            <tr>
+                <td>Natan</td>
+                <td>29</td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td>Suellen</td>
+                <td>29</td>
+                <td>Feminino</td>
+            </tr>
+        </table>
+        <!-- FIM TABELA BASICA -->
+
+
+        <h1>Organizando a tabela</h1>
+        <!-- ORGANIZANDO TABELAS -->
+        <table>
+            <caption>Caracteristicas de Pessoas</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Natan</td>
+                    <td>29</td>
+                    <td>Masculino</td>
+                </tr>
+                <tr>
+                    <td>Suellen</td>
+                    <td>29</td>
+                    <td>Feminino</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>Total: </td>
+                    <td>2 pessoas</td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- FIM ORGANIZANDO TABELAS -->
+
+
+        <h1>Tabela complexa</h1>
+        <!-- TABELA COMPLEXA -->
+        <table>
+            <caption>Produzidos x Vendidos por Loja</caption>
+
+            <colgroup>
+                <col>
+                <col span="2" style="background-color: #6dcfe3;">
+                <col span="2" style="background-color: #72a868;">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2" scope="colgroup">Itaim</th>
+                    <th colspan="2" scope="colgroup">Itaquera</th>
+                </tr>
+
+                <tr>
+                    <th scope="col">Produzidos</th>
+                    <th scope="col">Vendidos</th>
+                    <th scope="col">Produzidos</th>
+                    <th scope="col">Vendidos</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Nescau</th>
+                    <td>40</td>
+                    <td>20</td>
+                    <td>90</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <th scope="row">Chocolate</th>
+                    <td>100</td>
+                    <td>96</td>
+                    <td>63</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sobremesa</th>
+                    <td>77</td>
+                    <td>50</td>
+                    <td>54</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- FIM TABELA COMPLEXA -->
+    </body>
+
+</html>
