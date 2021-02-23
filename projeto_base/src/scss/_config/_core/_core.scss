@@ -1,0 +1,27 @@
+// # Pages
+
+
+// Components
+// =====================================
+
+// `.btn`
+// =====================================
+$global-btn-solid-themes: (
+    primary: (
+        function: "lighten",
+        properties: (
+            color: #000,
+            background-color: #3c3c3c,
+        ),
+        percent: 20%,
+    ),
+    secondary: (
+        function: "darken",
+        properties: (
+            color: #FFF,
+            background-color: #7D7D7D,
+        ),
+        percent: 20%,
+    )
+) !global;
+
