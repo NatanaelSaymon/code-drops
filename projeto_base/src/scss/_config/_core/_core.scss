@@ -22,6 +22,15 @@ $global-btn-solid-themes: (
             background-color: #7D7D7D,
         ),
         percent: 20%,
+    ),
+    outline-primary: (
+        function: "darken",
+        properties: (
+            border-color: currentColor,
+            color: #000,
+            background-color: #FFFFFF
+        ),
+        percent: 20%,
     )
 ) !global;
 
