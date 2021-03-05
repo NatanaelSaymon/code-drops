@@ -21,6 +21,33 @@
 }
 
 .btn {
+    // display: inline-block;
+	// border: ;
+	// padding: 0 1em;
+
+	// font-family: ;
+	// font-weight: bold;
+	// font-size: ;
+	// line-height: ;
+	// text-transform: lowercase;
+	// text-align: center;
+
+	// color: inherit;
+	// background-color: transparent;
+
+	// transition: .2s;
+
+	&[disabled] {
+		pointer-events: none;
+		opacity: 0.2;
+	}
+
+	&:hover,
+	&:focus {
+
+		text-decoration: none;
+	}
+
     @each $theme, $map in $global-btn-solid-themes {
         $function: map-get($map, "function");
         $map-properties: map-get($map, "properties");
