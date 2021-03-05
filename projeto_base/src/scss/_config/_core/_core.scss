@@ -15,6 +15,7 @@ $global-btn-solid-themes: (
         ),
         percent: 20%,
     ),
+
     secondary: (
         function: "darken",
         properties: (
@@ -23,6 +24,7 @@ $global-btn-solid-themes: (
         ),
         percent: 20%,
     ),
+    
     outline-primary: (
         function: "darken",
         properties: (
