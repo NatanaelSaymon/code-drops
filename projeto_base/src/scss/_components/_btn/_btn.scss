@@ -11,17 +11,8 @@
 // =============================================================================
 // Estilos
 // =============================================================================
-
-@function btn-change-color($color, $percent, $function: "darken") {
-    @if($function == "lighten") {
-        @return lighten($color, $percent);
-    }
-
-    @return darken($color, $percent);
-}
-
 .btn {
-    // display: inline-block;
+    // display: block;
 	// border: ;
 	// padding: 0 1em;
 
@@ -44,51 +35,9 @@
 
 	&:hover,
 	&:focus {
-
 		text-decoration: none;
 	}
-
-    @each $theme, $map in $global-btn-solid-themes {
-        $function: map-get($map, "function");
-        $map-properties: map-get($map, "properties");
-        $color: map-get($map-properties, "color");
-        $bg-color: map-get($map-properties, "background-color");
-        $percent: map-get($map, "percent");
-
-        &--#{$theme} {
-
-            transition: .3s;
-
-            @each $property, $value in $map-properties { //Pegando todas as propriedades do component btn
-
-                #{$property}: #{$value};
-
-            }
-
-            &:hover, &focus {
-                @if($bg-color) {
-                    background-color: btn-change-color($bg-color, $percent, $function);
-                }
-            }
-        }
-
-        &--outline {
-
-            &-#{$theme} {
-
-                @if($bg-color) {
-                    border-color: currentColor;
-                    color: $bg-color;
-                    &:hover, &focus {
-                        color: btn-change-color($bg-color, $percent);
-                        background-color: btn-change-color($bg-color, $percent, $function)
-                    }
-                }
-            }
-        }
-    }
 }
-
 // =============================================================================
 // Media Queries
 // =============================================================================

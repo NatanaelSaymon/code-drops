@@ -1,24 +1,62 @@
 // # Variaveis
 
-// =============================================================================
-// Variaveis
-// =============================================================================
-$color-primary: #2692FF;
-$color-secondary: #e1e1e1;
-
-// =============================================================================
-// Placeholders
+// Cores do projeto em relacao a empresa
 // =============================================================================
 
-// =============================================================================
-// Estilos
+// Cor principal do projeto
+$global-project-color-primary: #EB5E55 !global;
+$global-project-color-text: #000 !global;
+$global-project-bg-color: #EEE !global;
+
+
+// Cores de redes sociais
 // =============================================================================
 
-// =============================================================================
-// Media Queries
+// Cores oficiais de redes sociais: https://brandcolors.net/
+$global-social-rss            : #EE802F !global;
+$global-social-facebook       : #3B5998 !global;
+$global-social-twitter        : #55ACEE !global;
+$global-social-google-plus    : #DD4B39 !global;
+$global-social-linkedin       : #0073B2 !global;
+$global-social-instagram      : #5851DB !global;
+$global-social-instagram-blue : $global-social-instagram !global;
+$global-social-instagram-red  : #FD1D1D !global;
+$global-social-pinterest      : #BD081C !global;
+$global-social-youtube        : #CD201F !global;
+$global-social-whatsapp       : #43D854 !global;
+$global-social-snapchat       : #FFFC00 !global;
+
+
+// Cores de aviso
 // =============================================================================
 
+// Erro e alerta
+$global-error-color  : #F00 !global;
+$global-danger-color : $global-error-color !global;
+
+
+// Fontes
 // =============================================================================
-// Imports
+$global-system-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !global;
+
+$global-font1 : "font1", sans-serif !global;
+
+
+// Container
 // =============================================================================
+$global-container-max-width: 1000px !global;
+
+
+// Outline
+// =============================================================================
+$global-outline-width: 1px !global;
+$global-outline-style: dashed !global;
+$global-outline-color: gray !global;
+$global-outline: $global-outline-width $global-outline-style $global-outline-color !global;
+
+
+
+
+
+
 

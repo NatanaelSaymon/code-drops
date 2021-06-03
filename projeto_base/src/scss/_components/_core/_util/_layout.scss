@@ -1,0 +1,128 @@
+// # layout
+
+// =============================================================================
+// Imports
+// =============================================================================
+
+// =============================================================================
+// Variaveis
+// =============================================================================
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+// =============================================================================
+// Estilos
+// =============================================================================
+
+/* display
+============================================================================ */
+
+.display-inherit {
+    display: inherit;
+}
+
+.block {
+    display: block;
+}
+
+.table {
+    display: table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.hidden,
+.display-none {
+    display: none !important;
+}
+
+/* visible
+============================================================================ */
+
+.visibility-inherit {
+    visibility: inherit;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+.visibility-visible {
+    visibility: visible;
+}
+
+/* overflow
+============================================================================ */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+
+/* vertical-align
+============================================================================ */
+
+.valign-baseline {
+    vertical-align: baseline;
+}
+
+.valign-top {
+    vertical-align: top;
+}
+
+.valign-middle {
+    vertical-align: middle;
+}
+
+.valign-bottom {
+    vertical-align: bottom;
+}
+
+/* position
+============================================================================ */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.static {
+    position: static;
+}
+
+.fixed {
+    position: fixed;
+}
+
+
+
+// =============================================================================
+// Media Queries
+// =============================================================================
