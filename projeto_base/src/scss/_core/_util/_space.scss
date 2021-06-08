@@ -1,0 +1,132 @@
+// # Espaçamentos do projeto
+
+// =============================================================================
+// Imports
+// =============================================================================
+
+// =============================================================================
+// Variaveis
+// =============================================================================
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+// =============================================================================
+// Mixins
+// =============================================================================
+@mixin space($property: null, $class-prefix: null, $min: 0, $max: 100, $step: 5) {
+    @for $i from $min through $max {
+        @if($i % $step == 0) {
+            .#{$class-prefix}#{$i} {
+                $value: #{$i}px;
+
+                @if(type-of($property) == list) {
+                    @each $item in $property {
+                        #{$item}: $value;
+                    }
+                }
+
+                @else {
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}
+// =============================================================================
+// Estilos
+// =============================================================================
+
+// Margins
+// =============================================================================
+.m-auto {
+    margin: auto;
+}
+
+@include space(margin, m-);
+
+// margin-top
+// ====================================
+
+.mt-auto {
+    margin-top: auto;
+}
+
+@include space(margin-top, mt-);
+
+// margin-right
+// ====================================
+
+.mr-auto {
+    margin-right: auto;
+}
+
+@include space(margin-right, mr-);
+
+// margin-bottom
+// ====================================
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+@include space(margin-bottom, mb-);
+
+// margin-left
+// ====================================
+
+.ml-auto {
+    margin-left: auto;
+}
+
+@include space(margin-left, ml-);
+
+// Margin vertical
+// ====================================
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@include space((margin-top, margin-bottom), my-);
+
+// Margin horizontal
+// ====================================
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@include space((margin-right, margin-left), mx-);
+
+// Paddings
+// =============================================================================
+
+@include space(padding, p-);
+
+// padding-top
+// ====================================
+
+@include space(padding-top, pt-);
+
+// padding-right
+// ====================================
+
+@include space(padding-right, pr-);
+
+// padding-bottom
+// ====================================
+
+@include space(padding-bottom, pb-);
+
+// padding-left
+// ====================================
+
+@include space(padding-left, pl-);
+
+// =============================================================================
+// Media Queries
+// =============================================================================
