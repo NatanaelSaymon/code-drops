@@ -11,32 +11,20 @@
 // =============================================================================
 // Estilos
 // =============================================================================
-.btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+.btn__icon {
+  $local-size: 1.2em;
 
-	min-height: $global-btn-min-height;
-	border: 1px solid transparent;
+  flex: 0 0 $local-size;
 
-	vertical-align: top;
-	font-family: $global-font1;
-	font-size: 15px;
-	font-weight: 600;
-	line-height: 1.4;
-	text-align: center;
-	text-decoration: none;
-	text-transform: lowercase;
+  display: block;
+  width: $local-size;
+  height: $local-size;
 
-	color: inherit;
-	background-color: transparent;
+  fill: currentColor;
+}
 
-	transition: .2s;
-
-	&--full {
-		display: flex;
-		width: 100%;
-	}
+.btn__text {
+  flex: 0 0 auto;
 }
 // =============================================================================
 // Media Queries
@@ -45,8 +33,3 @@
 // =============================================================================
 // Imports
 // =============================================================================
-@import "_icon/_icon.scss";
-@import "_themes/_themes.scss";
-
-// A importação do _disabled sempre deve ser a última
-@import "_disabled/_disabled.scss";

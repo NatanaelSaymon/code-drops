@@ -1,12 +1,26 @@
-// # Variaveis
+// # Variaveis Globais
+
+/*
+  # Prefixos
+
+  $global- : indica uma variavel global
+  $local-  : indica uma variavel local
+*/
 
 // Cores do projeto em relacao a empresa
 // =============================================================================
 
-// Cor principal do projeto
+// Cores principais do projeto
 $global-project-color-primary: #EB5E55 !global;
 $global-project-color-text: #000 !global;
 $global-project-bg-color: #EEE !global;
+
+// Cores de aviso
+// =============================================================================
+
+// Erro e alerta
+$global-error-color  : #F00 !global;
+$global-danger-color : $global-error-color !global;
 
 
 // Cores de redes sociais
@@ -27,19 +41,16 @@ $global-social-whatsapp       : #43D854 !global;
 $global-social-snapchat       : #FFFC00 !global;
 
 
-// Cores de aviso
-// =============================================================================
-
-// Erro e alerta
-$global-error-color  : #F00 !global;
-$global-danger-color : $global-error-color !global;
-
-
 // Fontes
 // =============================================================================
-$global-system-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !global;
+$global-system-sans-serif: 
+  Arial,
+  system-ui, 
+  "Segoe UI", 
+  "Helvetica Neue", 
+  sans-serif !global;
 
-$global-font1 : "font1", sans-serif !global;
+$global-font1 : Arial, sans-serif !global;
 
 
 // Container
@@ -54,9 +65,22 @@ $global-outline-style: dashed !global;
 $global-outline-color: gray !global;
 $global-outline: $global-outline-width $global-outline-style $global-outline-color !global;
 
+// Transitions
+// =============================================================================
+
+/*
+  Variavel com o objetivo de padronizar os valores para transitions.
+*/
+$global-transitions-duration        : .2s !global;
+$global-transitions-timing-function : ease !global;
 
 
+// Componentes
+// =============================================================================
 
+// .btn__icon
+// =============================================================================
+$global-btn-min-height: 40px !global;
 
-
-
+$global-btn--primary-color: #fff !global;
+$global-btn--primary-bg-color: #46BC39 !global;
