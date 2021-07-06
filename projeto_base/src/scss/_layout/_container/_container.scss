@@ -21,19 +21,18 @@ Limitador de largura centralizado horizontalmente
 // =============================================================================
 
 .container {
-    max-width: $global-container-max-width;
-    width: 95%;
-    margin: {
-        left: auto;
-        right: auto;
-    }
+  max-width: $global-container-max-width;
+  width: 95%;
+  margin: {
+      left: auto;
+      right: auto;
+  }
 
-    &--full {
-        width: 100%;
-    }
+  &--full {
+      width: 100%;
+  }
 }
-  
+
 // =============================================================================
 // Media Queries
 // =============================================================================
-  

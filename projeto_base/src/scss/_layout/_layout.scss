@@ -1,11 +1,11 @@
-// # Classes utilitarias
+// # Layout
+
+/*
+  Elementos que ajudam no layout, omo containers, grid e etc.
+*/
 
 // =============================================================================
 // Imports
 // =============================================================================
-
-@import "_layout.scss";
-@import "_screenreaders.scss";
-@import "_space.scss";
-@import "_typography.scss";
-
+@import "_container/_container.scss";
+@import "_sticky-footer/_sticky-footer.scss";
